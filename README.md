@@ -3,11 +3,11 @@
 
 
 > You are never too old to set another goal or to dream a new dream.
-> 
 > So if we are not dead I don't want to stop learning!!.
 
 ## Course Outline
 Certainly, here's a basic outline of the concepts typically covered in the field of machine learning:
+
 Email contact: Pattranit210343@gmail.com
 - [Documents](/Course/Algorithms%20Design%20and%20Analysis/) |[Code](/Project/Dependency%20Parsing%20Project/) Week 1: Case study Regressing 
 - [Documents](/Course/Algorithms%20Design%20and%20Analysis/) |[Code](/Project/Dependency%20Parsing%20Project/) Week 2: Batch Gradient Descent 
