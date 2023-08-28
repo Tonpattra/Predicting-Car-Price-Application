@@ -11,12 +11,19 @@ you adhere to best practices. There are some important coding considerations:
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/7f0b28b8-a14c-4b5b-ad15-f1de264fb0b8)
 
 ## 1.2 For the feature fuel, remove all rows with CNG and LPG because CNG and LPG use a different
-mileage system i.e., km/kg which is different from kmfeaturepl for Diesel and Petrols :
-- High PSS scores can indicate chronic stress.
-- EEG data doesn’t vary with personal information such as age, gender, etc.
+- I can use function df.where also but this have shortcut to remove the data
+![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/153ea38d-e3a9-466e-984c-cd69dba256fd)
+
+## 1.3 For the feature mileage, remove “kmpl” and convert the column to numerical type (e.g., float).
+## 1.4 For the feature engine, remove “CC” and convert the column to numerical type (e.g., float)
+## 1.5 Do the same for max power
+- ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/ca78e0ca-0a6d-4131-8975-c909f88857cf)
+## 1.6 For the feature brand, take only the first word and remove the rest
+![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/b46bfe84-4074-419c-97c5-a4c2d9094625)
 
 
-## Member :
+
+Hint: use df.mileage.str.split :
 ```
 st123012	Todsavad Tangtortan
 st123459	Anjana Tissera
