@@ -17,7 +17,8 @@ you adhere to best practices. There are some important coding considerations:
 ## 1.3 For the feature mileage, remove “kmpl” and convert the column to numerical type (e.g., float).
 ## 1.4 For the feature engine, remove “CC” and convert the column to numerical type (e.g., float)
 ## 1.5 Do the same for max power
-- ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/ca78e0ca-0a6d-4131-8975-c909f88857cf)
+![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/ca78e0ca-0a6d-4131-8975-c909f88857cf)
+
 ## 1.6 For the feature brand, take only the first word and remove the rest
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/b46bfe84-4074-419c-97c5-a4c2d9094625)
 
