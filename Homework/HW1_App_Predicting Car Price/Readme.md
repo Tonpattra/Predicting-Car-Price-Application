@@ -4,22 +4,22 @@ Preparing the datasets - Download the Car Price dataset from Google classroom. P
 loading, EDA, preprocessing, model selection, · · · , inference. Grade will be given based on the how well
 you adhere to best practices. There are some important coding considerations:
 
-## 1.1 For the feature owner, map First owner to 1, ..., Test Drive Car to 5 : 
+1.1 For the feature owner, map First owner to 1, ..., Test Drive Car to 5 : 
 - I check the all data and dtype Owner data
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/9582377a-0b9b-4c2a-8ff7-485275e344e1)
 - Rename Owner data (1 until 5)
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/7f0b28b8-a14c-4b5b-ad15-f1de264fb0b8)
 
-## 1.2 For the feature fuel, remove all rows with CNG and LPG because CNG and LPG use a different
+1.2 For the feature fuel, remove all rows with CNG and LPG because CNG and LPG use a different
 - I can use function df.where also but this have shortcut to remove the data
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/153ea38d-e3a9-466e-984c-cd69dba256fd)
 
-## 1.3 For the feature mileage, remove “kmpl” and convert the column to numerical type (e.g., float).
-## 1.4 For the feature engine, remove “CC” and convert the column to numerical type (e.g., float)
-## 1.5 Do the same for max power
+1.3 For the feature mileage, remove “kmpl” and convert the column to numerical type (e.g., float).
+1.4 For the feature engine, remove “CC” and convert the column to numerical type (e.g., float)
+1.5 Do the same for max power
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/ca78e0ca-0a6d-4131-8975-c909f88857cf)
 
-## 1.6 For the feature brand, take only the first word and remove the rest
+1.6 For the feature brand, take only the first word and remove the rest
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/b46bfe84-4074-419c-97c5-a4c2d9094625)
 
 
