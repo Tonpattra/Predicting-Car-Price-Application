@@ -40,13 +40,18 @@ and analysing the results. Possible points of discussion:
 - Develop a web-based application that contains the model. Here you will be tasked to self-study how to deploy the model into production. Here are some guidelines:
 - Here you have multiple options. Those who are veteran web developer may prefer their own web app
 stack which is welcomed.
+1) Users enter the domain on their browser. They land on your page.
+2) (optional) Users may need to navigate to a prediction page.
+3) Users read the instruction given on the page that instructs them on how the prediction works.
+4) Users find the input form, put in the appropriate data, and click submit.
+5) Note that if users do not have information on certain field, you have to allow users to skip that field.
+In that case, we recommend you to fill the missing field with imputation technique you have learned
+in the class.
+6) A moment later (depending on your model and hardware performance), the result is returned and
+printed below the form.
 
 ## Results :How to use Applications
-- Out of the ML models we trained, Support Vector Machine has higher test accuracy.
-- Generally, When Relative Gamma frequency band is included as a feature, Model testing accuracy is high.
-- Deep Learning Models didn’t result with good accuracy.
-- Accuracy of testing Akkaradet’s dataset
-    - Low accuracy compared to our test dataset
+
 
 ## Conclusion :
 - Hypothesis 1:  Some of the frequency band are more significant
