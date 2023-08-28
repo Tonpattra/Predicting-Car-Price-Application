@@ -7,16 +7,16 @@ Preparing the datasets - Download the Car Price dataset from Google classroom. P
 loading, EDA, preprocessing, model selection, · · · , inference. Grade will be given based on the how well
 you adhere to best practices. There are some important coding considerations:
 
-• For the feature owner, map First owner to 1, ..., Test Drive Car to 5
-• For the feature fuel, remove all rows with CNG and LPG because CNG and LPG use a different
+- For the feature owner, map First owner to 1, ..., Test Drive Car to 5
+- For the feature fuel, remove all rows with CNG and LPG because CNG and LPG use a different
 mileage system i.e., km/kg which is different from kmfeaturepl for Diesel and Petrol
-• For the feature mileage, remove “kmpl” and convert the column to numerical type (e.g., float).
+- For the feature mileage, remove “kmpl” and convert the column to numerical type (e.g., float).
 Hint: use df.mileage.str.split
-• For the feature engine, remove “CC” and convert the column to numerical type (e.g., float)
-• Do the same for max power
-• For the feature brand, take only the first word and remove the rest
-• Drop the feature torque, simply because Chaky’s company does not understand well about it
-• You will found out that Test Drive Cars are ridiculously expensive. Since we do not want to
+- For the feature engine, remove “CC” and convert the column to numerical type (e.g., float)
+- Do the same for max power
+- For the feature brand, take only the first word and remove the rest
+- Drop the feature torque, simply because Chaky’s company does not understand well about it
+- You will found out that Test Drive Cars are ridiculously expensive. Since we do not want to
 involve this, we will simply delete all samples related to it.
 
 Show the results in Task 1:
