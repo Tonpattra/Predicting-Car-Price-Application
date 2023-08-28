@@ -60,11 +60,7 @@ After that you can click send, Get the Data Received
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/dd613bef-17d8-4399-8abb-42d28eb5ad9a)
 
 And when you need to come back homepage, you cilck Button Back to homework
-
+But you forgot to fill in one of the fields. there is no need to worry Because we will take the middle value of the data to Predict instead.
 
 ## Conclusion :
-- Hypothesis 1:  Some of the frequency band are more significant
-    - The results show that Relative Gamma has a higher significance in classifying chronic stress
-- Hypothesis 2 : Chronic Stress can be classified based on EEG data
-    - Model accuracy varies with the dataset
-    - Our experiment doesn't completely support this hypothesis.
+- I tried to write an application for the first time. I really like it and I feel very understanding in class. Thank you for the homework this time. That makes it a good experience!!
