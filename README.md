@@ -10,7 +10,7 @@
 Certainly, here's a basic outline of the concepts typically covered in the field of machine learning:
 
 Email contact: Pattranit210343@gmail.com
-- [Documents](/Course/Algorithms%20Design%20and%20Analysis/) |[Code](/Project/Dependency%20Parsing%20Project/) Week 1: Case study Regressing 
+- [Documents]([/Course/Algorithms%20Design%20and%20Analysis/](https://github.com/Tonpattra/Machine-Learning/blob/main/00%20-%20Case%20Study/01%20-%20Case%20Study%20-%20Regression.ipynb)) |[Code](/Project/Dependency%20Parsing%20Project/) Week 1: Case study Regressing 
 - [Documents](/Course/Algorithms%20Design%20and%20Analysis/) |[Code](/Project/Dependency%20Parsing%20Project/) Week 2: Batch Gradient Descent 
 - [Documents](/Course/Algorithms%20Design%20and%20Analysis/) |[Code](/Project/Dependency%20Parsing%20Project/) Week 3: Regularization         
 - [Documents](/Course/Algorithms%20Design%20and%20Analysis/) |[Code](/Project/Dependency%20Parsing%20Project/) Week 4: Multinomial Logistic Regression 
