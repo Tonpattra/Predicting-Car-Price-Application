@@ -49,6 +49,17 @@ stack which is welcomed.
 printed below the form.
 
 ## Results :How to use Applications
+This is the working window of the Application you will notice. upper right corner There are 5 details: main page, homework details page, results page, question page, contact page. And the last page is External.
+![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/787550fc-08df-4786-bdab-2bf91f4bfdbf)
+
+The results for Predicting Car Prices are available on the results page.
+You can add data 3 type (power, engine and years)
+![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/31abbfa9-d2f2-423b-b62b-32b4267619d7)
+
+After that you can click send, Get the Data Received
+![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/dd613bef-17d8-4399-8abb-42d28eb5ad9a)
+
+And when you need to come back homepage, you cilck Button Back to homework
 
 
 ## Conclusion :
