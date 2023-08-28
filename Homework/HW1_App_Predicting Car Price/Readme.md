@@ -2,8 +2,8 @@
 The dataset is look like this
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/fbdf466b-0b33-4c6b-a244-c57194895dfe)
 
-## Task 1 :
-Preparing the datasets - Download the Car Price dataset from Google classroom. Perform
+## Task 1 :Preparing the datasets 
+- Download the Car Price dataset from Google classroom. Perform
 loading, EDA, preprocessing, model selection, · · · , inference. Grade will be given based on the how well
 you adhere to best practices. There are some important coding considerations:
 
@@ -23,8 +23,8 @@ Show the results in Task 1:
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/1a876cff-1ece-43ad-bab9-b6d89dbe2e39)
 
 
-## Task 2 :
-Report - In the end of the notebook, please write a 2-3 paragraphs summary deeply discussing
+## Task 2 :Report 
+- In the end of the notebook, please write a 2-3 paragraphs summary deeply discussing
 and analysing the results. Possible points of discussion:
 - Which features are important? Which are not? Why?
   Ans: The feature are important are max_power, engine and years.you can check the the best feature form ppscore table in below: hight score means very important feature more than low score.
@@ -35,8 +35,13 @@ and analysing the results. Possible points of discussion:
   Ans: I try to compare 4 model (algorithm_names = ["Linear Regression", "SVR", "KNeighbors Regressor", "Decision-Tree Regressor", "Random-Forest Regressor"]) Algorithm is perform well is  Random-Forest Regressor Because this model have the best Mean Score: -0.05946266469462726
   
   ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/a4f21d99-6fbf-4bdc-8c18-5d8542759b1c)
+  
+## Task 3 :Deployment 
+- Develop a web-based application that contains the model. Here you will be tasked to self-study how to deploy the model into production. Here are some guidelines:
+- Here you have multiple options. Those who are veteran web developer may prefer their own web app
+stack which is welcomed.
 
-## Result :
+## Results :How to use Applications
 - Out of the ML models we trained, Support Vector Machine has higher test accuracy.
 - Generally, When Relative Gamma frequency band is included as a feature, Model testing accuracy is high.
 - Deep Learning Models didn’t result with good accuracy.
