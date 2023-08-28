@@ -28,9 +28,12 @@ Report - In the end of the notebook, please write a 2-3 paragraphs summary deepl
 and analysing the results. Possible points of discussion:
 - Which features are important? Which are not? Why?
   Ans: The feature are important are max_power, engine and years.you can check the the best feature form ppscore table in below: hight score means very important feature more than low score.
+  
   ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/f94e3b93-f1d1-47e6-807f-7b2f0f64c16e)
+  
 - For the feature fuel, remove all rows with CNG and LPG because CNG and LPG use a different
   Ans: I try to compare 4 model (algorithm_names = ["Linear Regression", "SVR", "KNeighbors Regressor", "Decision-Tree Regressor", "Random-Forest Regressor"]) Algorithm is perform well is  Random-Forest Regressor Because this model have the best Mean Score: -0.05946266469462726
+  
   ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/a4f21d99-6fbf-4bdc-8c18-5d8542759b1c)
 
 ## Result :
@@ -46,8 +49,3 @@ and analysing the results. Possible points of discussion:
 - Hypothesis 2 : Chronic Stress can be classified based on EEG data
     - Model accuracy varies with the dataset
     - Our experiment doesn't completely support this hypothesis.
-
-
-- Minguillon, J., Lopez-Gordo, M. A., & Pelayo, F. (2016). Stress assessment by prefrontal relative gamma. Frontiers in computational neuroscience, 10, 101.
-
-- Zhang, Y., Wang, Q., Chin, Z. Y., & Ang, K. K. (2020, July). Investigating different stress-relief methods using Electroencephalogram (EEG). In 2020 42nd Annual International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC) (pp. 2999-3002). IEEE.
