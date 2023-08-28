@@ -1,0 +1,571 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+			.container {
+				text-align: center;
+				/* background-color: rgba(255, 255, 255, 0.9); */
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				width: 400px;
+				max-width: 90%;
+			}
+	
+			.textboxes {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 20px;
+			}
+	
+			.input-group {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 20px;
+			}
+	
+			label {
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+	
+			input[type="text"] {
+				padding: 12px;
+				border-radius: 6px;
+				font-size: 16px;
+				background-color: #f5f5f5;
+				width: 100%;
+				margin: 5px 0;
+			}
+	
+			input[type="submit"] {
+				background-color: #FF5126;
+				color: #fff;
+				padding: 12px;
+				border: none;
+				border-radius: 15px;
+				cursor: pointer;
+				transition: background-color 0.3s;
+				font-size: 20px;
+			}
+	
+			input[type="submit"]:hover {
+				background-color: #e7603e;
+			}
+
+		</style>
+	<!-- <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css') }}"> -->
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>PATTRANIT_HOMEWORK &mdash; Free HTML5 Template by freshdesignweb.com</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freshdesignweb.com" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freshdesignweb.com" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+	<!-- <meta name="Facebook:url" content="" /> -->
+
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css')}}"> 
+
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/icomoon.css')}}">
+
+	<link rel="stylesheet" href="{{url_for('static',filename='css/themify-icons.css')}}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{{url_for('static',filename='css/magnific-popup.css')}}">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{{url_for('static',filename='css/owl.carousel.min.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='css/owl.theme.default.min.css')}}">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="{{url_for('static',filename='css/flexslider.css')}}">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+	<!-- Modernizr JS -->
+	<script src="./js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="ubea-loader"></div>
+	
+	<div id="page">
+	<nav class="ubea-nav" role="navigation">
+		<div class="ubea-container">
+			<div class="row">
+				<div class="col-sm-2 col-xs-12">
+					<div id="ubea-logo"><a href="index.html">T.PATTRANIT <em>.</em></a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1 main-nav">
+					<ul>
+						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
+						<li><a href="#" data-nav-section="services">Homework</a></li>
+						<li><a href="#" data-nav-section="portfolio">Results</a></li>
+                        <li><a href="#" data-nav-section="about">Quesion</a></li>
+						<li><a href="#" data-nav-section="contact">Contact</a></li>
+						<li><a href="https://github.com/Tonpattra/" class="external">External</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+
+	<div id="ubea-hero" class="js-fullheight"  data-section="home">
+		<div class="flexslider js-fullheight">
+			<ul class="slides">
+		   	<li style="background-image: url(/static/images/img_bg_1.jpg);">
+		   		<div class="overlay"></div>
+		   		<div class="container">
+		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+		   				<div class="slider-text-inner">
+		   					<h2>Predicting Car Price</h2>
+							   <h2><br>"Buy the car you want, drive the road you want"</h2>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url(/static/images/img_bg_2.jpg);">
+		   		<div class="overlay"></div>
+		   		<div class="container">
+		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+		   				<div class="slider-text-inner">
+		   					<h2><br>Want to know me more Let's meet in GITHUB!!.</h2>				
+		   					<p><a href="https://github.com/Tonpattra/" target="_blank" class="btn btn-primary btn-lg">Follow @Tonpattra</a></p>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+			   <li style="background-image: url(/static/images/img_bg_3.jpg);">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+						<div class="slider-text-inner">
+							<h2><br>This is a Homework of Mechine Learning (HW1)
+							<br> The topic is Deploy Regression model </h2>
+							<p><a href="#" target="_black" class="btn btn-primary btn-lg">Follow Fackbook-Pattranit Teerakoson</a></p>
+						</div>
+					</div>
+				</div>
+			</li>
+		  	</ul>
+	  	</div>
+	</div>
+
+	<div class="ubea-section-overflow">
+
+		<div class="ubea-section" id="ubea-services" data-section="services">
+			<div class="ubea-container">
+				<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center ubea-heading">
+							<h2>AT82.03: Machine Learning.</h2>
+							<p>A1: Predicting Car Price
+								In this assignment, you will solve a problem, i.e., Chaky company makes some car but he has difficulty
+								setting the price for the car. Please make a simple web-based car price prediction system.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="row">
+
+						
+							<div class="col-md-12">
+								<div class="feature-left">
+									<span class="icon">
+										<i class="icon-monitor"></i>
+									</span>
+									<div class="feature-copy">
+										<h3>Task 1. Preparing the datasets </h3>
+										<p> Download the Car Price dataset from Google classroom. Perform
+											loading, EDA, preprocessing, model selection, · · · , inference. Grade will be given based on the how well
+											you adhere to best practices.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="feature-left">
+									<span class="icon">
+										<i class="icon-cup"></i>
+									</span>
+									<div class="feature-copy">
+										<h3>Task 2. Report</h3>
+										<p>In the end of the notebook, please write a 2-3 paragraphs summary deeply discussing
+											and analysing the results. Possible points of discussion:
+											<br>• Which features are important? Which are not? Why?
+                                            <br>• Which algorithm performs well? Which does not? Why?</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 animate-box" data-animate-effect="fadeIn">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="feature-left">
+									<span class="icon">
+										<i class="icon-pencil"></i>
+									</span>
+									<div class="feature-copy">
+										<h3>Task 3. Deployment</h3>
+										<p>Develop a web-based application that contains the model. 
+											<br>• Here you have multiple options. Those who are veteran web developer may prefer their own web app
+											stack which is welcomed. 
+                                            <br>• The goal of this task is to expose/deploy our model for public use via the web interface.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="feature-left">
+									<span class="icon">
+										<i class="icon-cog"></i>
+									</span>
+									<div class="feature-copy">
+										<h3>Submission</h3>
+										<p>The deliverable for the app would be, in GitHub, you have a folder 'app' with 'Dockerfile', 'docker-compose.yaml' files, and 'code' folder.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ubea-section" id="ubea-portfolio" data-section="portfolio">
+			<div class="ubea-container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center ubea-heading">
+						<h2>Homework Test</h2>
+						<p><br>Deploy data class consists of 3 classes: 
+						<br>col_dict = {'max_power':1,'engine':2,'year':3}</p>
+					</div>
+				</div>
+				
+				<div class="container" data-section="about">
+						<h1>Deploy Regression</h1>
+						<form action="/receive_data" method="post">
+							<div class="textboxes">
+								<div class="input-group">
+									<label for="textbox1">power:</label>
+									<input type="text" id="textbox1" name="textbox1" placeholder="Data 1">
+								</div>
+								
+								<div class="input-group">
+									<label for="textbox2">engine:</label>
+									<input type="text" id="textbox2" name="textbox2" placeholder="Data 2">
+								</div>
+								
+								<div class="input-group">
+									<label for="textbox3">years:</label>
+									<input type="text" id="textbox3" name="textbox3" placeholder="Data 3">
+								</div>
+							</div>
+							
+							<!-- The button is kept inside the form and centered -->
+							<input type="submit" value="Send">
+						</form>
+					</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+        
+		<div class="ubea-section" id="ubea-faq" data-section="faq">
+			<div class="ubea-container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center ubea-heading">
+						<h2>Group Workshop</h2>
+						<p>Check your understandings</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>Why this dataset is a regression problem?</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p> <br>- Life expectancy (which is our label) is continuous.
+										<br>- It does not matter whether our features are continuous or discrete.</p>
+								</div>
+							</div>
+						</div>
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>how can I create a website/mobile application?</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p> save the model | using streamlit, dash, flask | load the model | put the numbers inside the model | and called `model.predict([np.array])</p>
+								</div>
+							</div>
+						</div>
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>Notice "status" is a object dtype.  What is "object" dtype?</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p>Basically "string" or "mixed" type.</p>
+								</div>
+							</div>
+						</div>
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>How many ways to scale data, and when to use them?</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p><br>- 2 ways - standardization (when mean is a good centrality measures)
+										<br>- normalization (when max and min are better centrality measures - e.g., signal)
+										<br>- Scaling helps the training process faster to reach convergence BUT it does not allow you to reach a better performance</p>
+								</div>
+							</div>
+						</div>
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>Why we should preprocess only AFTER we split the dataset?</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p>Prevent data leakage</p>
+								</div>
+							</div>
+						</div>
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>Try to change to other `X` and try find the best three features which get the best mse.</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p>Seems like all three features are important </p>
+								</div>
+							</div>
+						</div>
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>Notice "float64".  What 64 means?</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p>numeric type for decimal - 64 bits - how many alternating 0 and 1s to represent a number - the higher, the more precision it can hold.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-6">
+
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>"label-encoding" and "one-hot encoding".  What's the difference, and what's the pros and cons?</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p><br>- label encoding encodes categories into numbers from 0 to k, which k is the number of categories - 1
+										<br>- label encoding unintentionally creates an order --> 3 > 2 > 1 > 0
+										<br>- one-hot encoding --> creates one column for each category
+										<br>- You have 50 categories -> 50 extra columns.....that's ugly...</p>
+								</div>
+							</div>
+						</div>
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>What is `random_state` = 42"</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p><br>- you can use whatever numbers you want; it just allow you to reproduce that everytime you run the code again
+									   <br>- split things into training and testing set in a reproducible way</p>
+								</div>
+							</div>
+						</div>
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>How do we know whether to replace with mean or median?</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p>use `sns.displot` to look at the distribution; if mean represents the majority, use mean, otherwise, maybe median</p>
+								</div>
+							</div>
+						</div>
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>What is feature importance?</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p>to analyze which features contribute most to the prediction</p>
+								</div>
+							</div>
+						</div>
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>How much mse or r^2 is considered good or bad?</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p><br>- mse : [0, infty) | 0 is the best
+										<br>- r^2: (-infty, 1] | 1 is the best | 0 means not better than mean | - means worst than mean</p>
+								</div>
+							</div>
+						</div>
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>How do I know which algorithm to use?</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p>cross validation</p>
+								</div>
+							</div>
+						</div>
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>cross-validation and grid search, did we touch the testing set?</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p>ONLY the training set</p>
+								</div>
+							</div>
+						</div>
+						<div class="ubea-accordion">
+							<div class="ubea-accordion-heading">
+								<div class="icon"><i class="icon-cross"></i></div>
+								<h3>Why do we need to do grid search after cross validation?</h3>
+							</div>
+							<div class="ubea-accordion-content">
+								<div class="inner">
+									<p>to find the best possible configuration of that best already algorithm</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+    
+    <div id="ubea-blog" data-section="about">
+		<div class="ubea-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center ubea-heading">
+					<h2>About me</h2>
+					<img src="/static/images/my.jpg" alt="About Us Image" width=210 height=200>
+					<p><br> Name: Pattranit Teerakoson
+					   <br> School:	 School of Engineering and Technology
+					   <br> Department:	 Department of Industrial Systems Engineering
+					   <br> Area of Study:	 Mechatronics and Machine Intelligence</p>
+				</div>
+			</div>
+	    </div>
+    </div>
+      
+	<div id="ubea-contact" data-section="contact" class="ubea-cover ubea-cover-xs" style="background-image:url(/static/images/img_bg_4.jpg);">
+		<div class="overlay"></div>
+		<div class="ubea-container">
+			<div class="row text-center">
+				<div class="display-t">
+					<div class="display-tc">
+						<div class="col-md-12">
+							<h3>If you have inqueries please email us at <a href="#">st123050@ait.asia</a></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="ubea-footer" role="contentinfo">
+		<div class="ubea-container">
+			
+			<div class="row copyright">
+				<div class="col-md-12">
+					<p class="pull-left">
+						<small class="block">&copy; 2023 Homeworkweb. All Rights Reserved.</small> 
+						<small class="block">Designed by <a href="Pattranit Teerakoson" target="_blank">Pattranit Teerakoson</a></small>
+					</p>
+					<p class="pull-right">
+						<ul class="ubea-social-icons pull-right">
+							<li><a href="https://twitter.com/home?lang=th"><i class="icon-twitter"></i></a></li>
+							<li><a href="https://www.facebook.com/people/Pattranit-Teerakoson/pfbid02HpdMWMcmh3TgdoGzYSCvMAWtV6pdDUwgVuTWu6HvXJJZs9GJ5reK8ca6ZfC51avAl/?mibextid=ZbWKwL"><i class="icon-facebook"></i></a></li>
+							<li><a href="https://www.linkedin.com/feed/"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="/static/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/static/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/static/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/static/js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="/static/js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="/static/js/jquery.countTo.js"></script>
+	<!-- Flexslider -->
+	<script src="/static/js/jquery.flexslider-min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="/static/js/jquery.magnific-popup.min.js"></script>
+	<script src="/static/js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="/static/js/main.js"></script>
+
+	</body>
+</html>
+
