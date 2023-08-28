@@ -22,6 +22,7 @@ involve this, we will simply delete all samples related to it.
 Show the results in Task 1:
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/1a876cff-1ece-43ad-bab9-b6d89dbe2e39)
 
+
 ## Task 2 :
 Report - In the end of the notebook, please write a 2-3 paragraphs summary deeply discussing
 and analysing the results. Possible points of discussion:
