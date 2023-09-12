@@ -28,12 +28,15 @@ function xaviar (self, size) {
 }
 ```
 ```
-function r2(self, ytrue, ypred) {
-        y_bar = np.mean(ytrue)
-        ssres = ((ypred - ytrue) ** 2).sum()
-        sstot = ((ypred - y_bar) ** 2).sum()
-        r2 = 1 - (ssres/sstot)
-        return r2;
+def _train(self, X, y):
+        yhat = self.predict(X)
+        m    = X.shape[0]        
+        grad = (1/m) * X.T @(yhat - y) + self.regularization.derivation(self.theta)
+        # self.theta = self.theta - self.lr * grad
+        self.theta = self.update_weight(grad, self.moment)
+        if self.method == 'sto' :
+            y = np.array([y])
+        return self.mse(y, yhat), self.r2(y, yhat);
 }
 ```
 ```
@@ -112,13 +115,13 @@ class Normal(LinearRegression):
 }
 ```
 
-## Task 2 :Report 
-- In the end of the notebook, please write a 2-3 paragraphs summary deeply discussing
-and analysing the results. Possible points of discussion:
-- Which features are important? Which are not? Why?
-  Ans: The feature are important are max_power, engine and years.you can check the the best feature form ppscore table in below: hight score means very important feature more than low score.
+## Task 2 :Experiment - Using A1: Predicting Car Price 
+jupyter notebook that you have submitted as the starter, replace the modeling part with the class we have built above.
+The Result shown in ML Flow
+
+The best rR-squared model is 'method-sto-lr-0.0001-reg-Normal-init-zero' and get the best rR-squared: 0.8511926295723979
   
-  ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/f94e3b93-f1d1-47e6-807f-7b2f0f64c16e)
+  ![image](Homework/HW2/r2_result.png)
   
 - For the feature fuel, remove all rows with CNG and LPG because CNG and LPG use a different
   Ans: I try to compare 4 model (algorithm_names = ["Linear Regression", "SVR", "KNeighbors Regressor", "Decision-Tree Regressor", "Random-Forest Regressor"]) Algorithm is perform well is  Random-Forest Regressor Because this model have the best Mean Score: -0.05946266469462726
