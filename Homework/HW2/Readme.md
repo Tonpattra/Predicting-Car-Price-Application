@@ -1,1 +1,156 @@
-hw2
+# HW1: Predicting Car Price 
+The dataset is the same homeworks 1 but Implementation Based on 03 - Regularization.ipynb and modify LinearRegression()
+![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/fbdf466b-0b33-4c6b-a244-c57194895dfe)
+
+## Task 1 :Implementation Based on 03 - Regularization.ipynb and modify LinearRegression()
+- Add a function r2 that compute the r**2 score. Be reminded that you have learned this equation in the L1 lecture.:
+- We shall start with the defacto Xavier method
+- Learn about momentum. In short, momentum is a improved gradient descent technique that help alleviate the local minima stucking problem.
+- Implement a function inside the class that can plot the feature importance based on coefficients. Note that although large (positive or negative) magnitude of coefficients can usually indicate strong feature importance, it is important to assume that the input variables have the same scale or have been scaled prior to fitting a model
+  
+Show the results function in Task 1:
+```
+function r2(self, ytrue, ypred) {
+        y_bar = np.mean(ytrue)
+        ssres = ((ypred - ytrue) ** 2).sum()
+        sstot = ((ypred - y_bar) ** 2).sum()
+        r2 = 1 - (ssres/sstot)
+        return r2;
+}
+```
+```
+function xaviar (self, size) {
+        m = size
+        lower , upper = -(1.0 / np.sqrt(m)), (1.0 / np.sqrt(m))
+        numbers = np.random.rand(m)
+        scaled = lower + numbers * (upper - lower)
+        return scaled;
+}
+```
+```
+function r2(self, ytrue, ypred) {
+        y_bar = np.mean(ytrue)
+        ssres = ((ypred - ytrue) ** 2).sum()
+        sstot = ((ypred - y_bar) ** 2).sum()
+        r2 = 1 - (ssres/sstot)
+        return r2;
+}
+```
+```
+class LassoPenalty:
+    
+    def __init__(self, l):
+        self.l = l # lambda value
+        
+    def __call__(self, theta): #__call__ allows us to call class as method
+        return self.l * np.sum(np.abs(theta))
+        
+    def derivation(self, theta):
+        return self.l * np.sign(theta)
+    
+class NormalP:
+    
+    def __init__(self, l):
+        self.l = l # lambda value
+        
+    def __call__(self, theta): #__call__ allows us to call class as method
+        return 0
+        
+    def derivation(self, theta):
+        return 0    
+    
+class RidgePenalty:
+    
+    def __init__(self, l):
+        self.l = l
+        
+    def __call__(self, theta): #__call__ allows us to call class as method
+        return self.l * np.sum(np.square(theta))
+        
+    def derivation(self, theta):
+        return self.l * 2 * theta
+    
+class ElasticPenalty:
+    
+    def __init__(self, l = 0.1, l_ratio = 0.5):
+        self.l = l 
+        self.l_ratio = l_ratio
+
+    def __call__(self, theta):  #__call__ allows us to call class as method
+        l1_contribution = self.l_ratio * self.l * np.sum(np.abs(theta))
+        l2_contribution = (1 - self.l_ratio) * self.l * 0.5 * np.sum(np.square(theta))
+        return (l1_contribution + l2_contribution)
+
+    def derivation(self, theta):
+        l1_derivation = self.l * self.l_ratio * np.sign(theta)
+        l2_derivation = self.l * (1 - self.l_ratio) * theta
+        return (l1_derivation + l2_derivation)
+    
+class Lasso(LinearRegression):
+    
+    def __init__(self, method, lr, l):
+        self.regularization = LassoPenalty(l)
+        super().__init__(self.regularization, lr, method)
+        
+class Ridge(LinearRegression):
+    
+    def __init__(self, method, lr, l):
+        self.regularization = RidgePenalty(l)
+        super().__init__(self.regularization, lr, method)
+        
+class ElasticNet(LinearRegression):
+    
+    def __init__(self, method, lr, l, l_ratio=0.5):
+        self.regularization = ElasticPenalty(l, l_ratio)
+        super().__init__(self.regularization, lr, method)
+
+class Normal(LinearRegression):
+    
+    def __init__(self, method, lr, l):
+        self.regularization = NormalP(l)
+        super().__init__(self.regularization, lr, method)  
+}
+```
+
+## Task 2 :Report 
+- In the end of the notebook, please write a 2-3 paragraphs summary deeply discussing
+and analysing the results. Possible points of discussion:
+- Which features are important? Which are not? Why?
+  Ans: The feature are important are max_power, engine and years.you can check the the best feature form ppscore table in below: hight score means very important feature more than low score.
+  
+  ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/f94e3b93-f1d1-47e6-807f-7b2f0f64c16e)
+  
+- For the feature fuel, remove all rows with CNG and LPG because CNG and LPG use a different
+  Ans: I try to compare 4 model (algorithm_names = ["Linear Regression", "SVR", "KNeighbors Regressor", "Decision-Tree Regressor", "Random-Forest Regressor"]) Algorithm is perform well is  Random-Forest Regressor Because this model have the best Mean Score: -0.05946266469462726
+  
+  ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/a4f21d99-6fbf-4bdc-8c18-5d8542759b1c)
+  
+## Task 3 :Deployment 
+- Develop a web-based application that contains the model. Here you will be tasked to self-study how to deploy the model into production. Here are some guidelines:
+- Here you have multiple options. Those who are veteran web developer may prefer their own web app
+stack which is welcomed.
+  - Users enter the domain on their browser. They land on your page.
+  - (optional) Users may need to navigate to a prediction page.
+  - Users read the instruction given on the page that instructs them on how the prediction works.
+  - Users find the input form, put in the appropriate data, and click submit.
+  - Note that if users do not have information on certain field, you have to allow users to skip that field.In that case, we recommend you to fill the missing field with imputation technique you have learned in the class.
+  - A moment later (depending on your model and hardware performance), the result is returned and
+printed below the form.
+
+## Results :How to use Applications
+This is the working window of the Application you will notice. upper right corner There are 5 details: main page, homework details page, results page, question page, contact page. And the last page is External.
+![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/787550fc-08df-4786-bdab-2bf91f4bfdbf)
+
+The results for Predicting Car Prices are available on the results page.
+You can add data 3 type (power, engine and years)
+![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/31abbfa9-d2f2-423b-b62b-32b4267619d7)
+
+After that you can click send, Get the Data Received
+![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/dd613bef-17d8-4399-8abb-42d28eb5ad9a)
+
+And when you need to come back homepage, you cilck Button Back to homework
+But you forgot to fill in one of the fields. there is no need to worry Because we will take the middle value of the data to Predict instead.
+
+## Conclusion :
+- I tried to write an application for the first time. I really like it and I feel very understanding in class. Thank you for the homework this time. That makes it a good experience!!
+
