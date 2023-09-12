@@ -130,7 +130,7 @@ The best mse model is 'method-batch-lr-0.0001-reg-Normal-init-xaviar' and get th
 - Compare Feature important
   Perform the prediction on the test set using the best model and report the mse and r2 Plot the feature importance graph using the function we have built above.
   
-  ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/a4f21d99-6fbf-4bdc-8c18-5d8542759b1c)
+  ![image](https://github.com/Tonpattra/Machine-Learning/blob/main/Homework/HW2/important.png)
   
 ## Task 3 :Deployment 
 - Develop a web-based application that contains the model. Here you will be tasked to self-study how to deploy the model into production. Here are some guidelines:
