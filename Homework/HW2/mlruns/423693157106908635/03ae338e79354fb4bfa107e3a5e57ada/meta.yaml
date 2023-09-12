@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/423693157106908635/03ae338e79354fb4bfa107e3a5e57ada/artifacts
+end_time: 1694439292080
+entry_point_name: ''
+experiment_id: '423693157106908635'
+lifecycle_stage: active
+run_id: 03ae338e79354fb4bfa107e3a5e57ada
+run_name: Fold-2
+run_uuid: 03ae338e79354fb4bfa107e3a5e57ada
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1694439273653
+status: 3
+tags: []
+user_id: earth

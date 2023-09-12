@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/423693157106908635/0b0f6f0a42b94e19809af5fe32e01bba/artifacts
+end_time: 1694444131154
+entry_point_name: ''
+experiment_id: '423693157106908635'
+lifecycle_stage: active
+run_id: 0b0f6f0a42b94e19809af5fe32e01bba
+run_name: method-sto-lr-0.0001-reg-ElasticNet-init-xaviar
+run_uuid: 0b0f6f0a42b94e19809af5fe32e01bba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1694444052716
+status: 3
+tags: []
+user_id: earth

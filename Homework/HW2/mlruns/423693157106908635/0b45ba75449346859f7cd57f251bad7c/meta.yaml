@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/423693157106908635/0b45ba75449346859f7cd57f251bad7c/artifacts
+end_time: 1694441401783
+entry_point_name: ''
+experiment_id: '423693157106908635'
+lifecycle_stage: active
+run_id: 0b45ba75449346859f7cd57f251bad7c
+run_name: method-sto-lr-0.0001-reg-Lasso-init-xaviar
+run_uuid: 0b45ba75449346859f7cd57f251bad7c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1694441234384
+status: 3
+tags: []
+user_id: earth
