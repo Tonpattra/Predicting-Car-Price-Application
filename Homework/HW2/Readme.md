@@ -125,7 +125,7 @@ The best rR-squared model is 'method-sto-lr-0.0001-reg-Normal-init-zero' and get
 
 The best mse model is 'method-batch-lr-0.0001-reg-Normal-init-xaviar' and get the best rR-squared: 163.607877
   
-  ![image](https://github.com/Tonpattra/Machine-Learning/blob/main/Homework/HW2/r2_result.png)
+  ![image](https://github.com/Tonpattra/Machine-Learning/blob/main/Homework/HW2/mse_result.png)
   
 - Compare Feature important
   Perform the prediction on the test set using the best model and report the mse and r2 Plot the feature importance graph using the function we have built above.
@@ -156,7 +156,7 @@ You can add data 3 type (power, engine and years)
 
 After that you can click send, Get the Data Received
 
-![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/dd613bef-17d8-4399-8abb-42d28eb5ad9a)
+![image](https://github.com/Tonpattra/Machine-Learning/blob/main/Homework/HW2/results.png)
 
 And when you need to come back homepage, you cilck Button Back to homework
 But you forgot to fill in one of the fields. there is no need to worry Because we will take the middle value of the data to Predict instead.
