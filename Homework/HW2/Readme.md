@@ -121,7 +121,7 @@ The Result shown in ML Flow
 
 The best rR-squared model is 'method-sto-lr-0.0001-reg-Normal-init-zero' and get the best rR-squared: 0.8511926295723979
   
-  ![image](Homework/HW2/r2_result.png)
+  ![image](https://github.com/Tonpattra/Machine-Learning/Homework/HW2/r2_result.png)
   
 - For the feature fuel, remove all rows with CNG and LPG because CNG and LPG use a different
   Ans: I try to compare 4 model (algorithm_names = ["Linear Regression", "SVR", "KNeighbors Regressor", "Decision-Tree Regressor", "Random-Forest Regressor"]) Algorithm is perform well is  Random-Forest Regressor Because this model have the best Mean Score: -0.05946266469462726
