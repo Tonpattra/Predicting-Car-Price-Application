@@ -163,4 +163,6 @@ But you forgot to fill in one of the fields. there is no need to worry Because w
 
 ## Conclusion :
 - I tried to write an application for the first time. I really like it and I feel very understanding in class. Thank you for the homework this time. That makes it a good experience!!
+- How the new model is better than the old one Ans: I don't know why becuses my model the old is better than the new one TT
+
 
