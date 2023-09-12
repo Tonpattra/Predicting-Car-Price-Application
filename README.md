@@ -27,7 +27,7 @@ Email contact: Pattranit210343@gmail.com
 - [Documents](/Course/Algorithms%20Design%20and%20Analysis/) |[Code](/Project/Dependency%20Parsing%20Project/) Week 14: Q-Learning
 
 ## Homeworks
-- [Homework](https://github.com/Tonpattra/Machine-Learning/tree/main/Homework/HW1_App_Predicting%20Car%20Price) HW1 : Car Price Prediction
-- [Homework](/Course/Algorithms%20Design%20and%20Analysis/) HW2 : TBD
+- [Homework](https://github.com/Tonpattra/Machine-Learning/tree/main/Homework/HW1_App_Predicting%20Car%20Price) HW1 : Car Price Prediction(Old_model)
+- [Homework](https://github.com/Tonpattra/Machine-Learning/tree/main/Homework/HW2) HW2 : Car Price Prediction(New_model)
 - [Homework](/Course/Algorithms%20Design%20and%20Analysis/) HW3 : TBD
 
