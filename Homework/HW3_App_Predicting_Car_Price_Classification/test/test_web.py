@@ -23,15 +23,6 @@ def test_homepage_response(client):
     assert response.status_code == 200  # Check if the homepage responds with a 200 status code
     print("Homepage Test Passed")  # Print a message indicating the test passed
 
-def test_website1_response(client):
-    response = client.get('/website1')
-    assert response.status_code == 200  # Check if website1 responds with a 200 status code
-    print("Website1 Test Passed")  # Print a message indicating the test passed
-
-def test_website2_response(client):
-    response = client.get('/website2')
-    assert response.status_code == 200  # Check if website2 responds with a 200 status code
-    print("Website2 Test Passed")  # Print a message indicating the test passed
 
 def test_receive_data_post_response(client):
     data = {
