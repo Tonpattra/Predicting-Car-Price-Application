@@ -54,7 +54,8 @@ def recall(yhat, ytrue, class_det) :
             recall = tp/(tp+fn)
 
     return recall
-```  
+```
+``` 
 def f1(prec, rec):
     if prec == 0 or rec == 0:
         return 0  # Handle the case where either precision or recall is zero
