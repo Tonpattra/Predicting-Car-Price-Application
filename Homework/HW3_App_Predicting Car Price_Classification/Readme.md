@@ -5,11 +5,14 @@ The dataset is the same homeworks 1 but Implementation Based on 03 - Regularizat
 ## Task 1 :Define custom bin edges based on the maximum values from both y_train and y_test
 Show the results function in Task 1:
 ```
-bin_edges = [10, 11.5, 13, 14.5, 16.5]  # Adjust these as needed
+import pandas as pd
+import numpy as np
 
-# Use pd.cut with specified bin edges and labels
-y_train_cut2 = pd.cut(y_train, bins=bin_edges, labels=[0, 1, 2, 3], ordered=False)
-y_test_cut2 = pd.cut(y_test, bins=bin_edges, labels=[0, 1, 2, 3], ordered=False)
+bin_edges = [10, 12, 13, 14, 16.5]  # Adjust these as needed
+
+y_train_cut = pd.cut(y_train, bins=bin_edges, labels=[0, 1, 2, 3], ordered=False)
+y_test_cut = pd.cut(y_test, bins=bin_edges, labels=[0, 1, 2, 3], ordered=False)
+
 ```
 ```
 function xaviar (self, size) {
