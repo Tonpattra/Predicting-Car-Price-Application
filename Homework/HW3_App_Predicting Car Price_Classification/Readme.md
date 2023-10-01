@@ -1,4 +1,4 @@
-# HW1: Predicting Car Price 
+# HW3: Predicting Car Price Classification
 The dataset is the same homeworks 1 but Implementation Based on 03 - Regularization.ipynb and modify LinearRegression()
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/fbdf466b-0b33-4c6b-a244-c57194895dfe)
 
