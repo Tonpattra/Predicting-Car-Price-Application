@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Received</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #333;
+        }
+        button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            background-color: #FF5126;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color:  #f77959;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Car price perdiction</h1>
+        <p><strong>Car price old-model:</strong> {{ textbox1_data }}</p>
+        <p><strong>Car price new-model:</strong> {{ textbox2_data }}</p>
+        <p><strong>Car classification-model:</strong> {{ textbox3_data }}</p>
+        <!-- <p><strong>Textbox 2 Data:</strong> {{ textbox2_data }}</p>
+        <p><strong>Textbox 3 Data:</strong> {{ textbox3_data }}</p> -->
+        <!-- Button to navigate back to the main page -->
+        <button onclick="location.href='/'">Back to Homepage</button>
+    </div>
+</body>
+</html>
+
