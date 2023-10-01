@@ -2,21 +2,14 @@
 The dataset is the same homeworks 1 but Implementation Based on 03 - Regularization.ipynb and modify LinearRegression()
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/fbdf466b-0b33-4c6b-a244-c57194895dfe)
 
-## Task 1 :Implementation Based on 03 - Regularization.ipynb and modify LinearRegression()
-- Add a function r2 that compute the r**2 score. Be reminded that you have learned this equation in the L1 lecture.:
-- We shall start with the defacto Xavier method
-- Learn about momentum. In short, momentum is a improved gradient descent technique that help alleviate the local minima stucking problem.
-- Implement a function inside the class that can plot the feature importance based on coefficients. Note that although large (positive or negative) magnitude of coefficients can usually indicate strong feature importance, it is important to assume that the input variables have the same scale or have been scaled prior to fitting a model
-  
+## Task 1 :Define custom bin edges based on the maximum values from both y_train and y_test
 Show the results function in Task 1:
 ```
-function r2(self, ytrue, ypred) {
-        y_bar = np.mean(ytrue)
-        ssres = ((ypred - ytrue) ** 2).sum()
-        sstot = ((ypred - y_bar) ** 2).sum()
-        r2 = 1 - (ssres/sstot)
-        return r2;
-}
+bin_edges = [10, 11.5, 13, 14.5, 16.5]  # Adjust these as needed
+
+# Use pd.cut with specified bin edges and labels
+y_train_cut2 = pd.cut(y_train, bins=bin_edges, labels=[0, 1, 2, 3], ordered=False)
+y_test_cut2 = pd.cut(y_test, bins=bin_edges, labels=[0, 1, 2, 3], ordered=False)
 ```
 ```
 function xaviar (self, size) {
