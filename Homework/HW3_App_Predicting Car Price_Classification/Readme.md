@@ -14,7 +14,7 @@ y_train_cut = pd.cut(y_train, bins=bin_edges, labels=[0, 1, 2, 3], ordered=False
 y_test_cut = pd.cut(y_test, bins=bin_edges, labels=[0, 1, 2, 3], ordered=False)
 
 ```
-## Task 2 :Define function accuracy, recall and precision
+## Task 2 :Define function accuracy, recall, precision and F1 Score
 Show the results function in Task 2:
 ```
 def accuracy(yhat, ytrue) :
@@ -55,87 +55,11 @@ def recall(yhat, ytrue, class_det) :
 
     return recall
 ```  
-class NormalP:
-    
-    def __init__(self, l):
-        self.l = l # lambda value
-        
-    def __call__(self, theta): #__call__ allows us to call class as method
-        return 0
-        
-    def derivation(self, theta):
-        return 0    
-    
-class RidgePenalty:
-    
-    def __init__(self, l):
-        self.l = l
-        
-    def __call__(self, theta): #__call__ allows us to call class as method
-        return self.l * np.sum(np.square(theta))
-        
-    def derivation(self, theta):
-        return self.l * 2 * theta
-    
-class ElasticPenalty:
-    
-    def __init__(self, l = 0.1, l_ratio = 0.5):
-        self.l = l 
-        self.l_ratio = l_ratio
-
-    def __call__(self, theta):  #__call__ allows us to call class as method
-        l1_contribution = self.l_ratio * self.l * np.sum(np.abs(theta))
-        l2_contribution = (1 - self.l_ratio) * self.l * 0.5 * np.sum(np.square(theta))
-        return (l1_contribution + l2_contribution)
-
-    def derivation(self, theta):
-        l1_derivation = self.l * self.l_ratio * np.sign(theta)
-        l2_derivation = self.l * (1 - self.l_ratio) * theta
-        return (l1_derivation + l2_derivation)
-    
-class Lasso(LinearRegression):
-    
-    def __init__(self, method, lr, l):
-        self.regularization = LassoPenalty(l)
-        super().__init__(self.regularization, lr, method)
-        
-class Ridge(LinearRegression):
-    
-    def __init__(self, method, lr, l):
-        self.regularization = RidgePenalty(l)
-        super().__init__(self.regularization, lr, method)
-        
-class ElasticNet(LinearRegression):
-    
-    def __init__(self, method, lr, l, l_ratio=0.5):
-        self.regularization = ElasticPenalty(l, l_ratio)
-        super().__init__(self.regularization, lr, method)
-
-class Normal(LinearRegression):
-    
-    def __init__(self, method, lr, l):
-        self.regularization = NormalP(l)
-        super().__init__(self.regularization, lr, method)  
-}
-```
-
-## Task 2 :Experiment - Using A1: Predicting Car Price 
-jupyter notebook that you have submitted as the starter, replace the modeling part with the class we have built above.
-The Result shown in ML Flow
-
-The best rR-squared model is 'method-sto-lr-0.0001-reg-Normal-init-zero' and get the best rR-squared: 0.8511926295723979
-  
-  ![image](https://github.com/Tonpattra/Machine-Learning/blob/main/Homework/HW2/r2_result.png)
-
-The best mse model is 'method-batch-lr-0.0001-reg-Normal-init-xaviar' and get the best rR-squared: 163.607877
-  
-  ![image](https://github.com/Tonpattra/Machine-Learning/blob/main/Homework/HW2/mse_result.png)
-  
-- Compare Feature important
-  Perform the prediction on the test set using the best model and report the mse and r2 Plot the feature importance graph using the function we have built above.
-  
-  ![image](https://github.com/Tonpattra/Machine-Learning/blob/main/Homework/HW2/important.png)
-  
+def f1(prec, rec):
+    if prec == 0 or rec == 0:
+        return 0  # Handle the case where either precision or recall is zero
+    return (2 * prec * rec) / (prec + rec)   
+ ```   
 ## Task 3 :Deployment 
 - Develop a web-based application that contains the model. Here you will be tasked to self-study how to deploy the model into production. Here are some guidelines:
 - Here you have multiple options. Those who are veteran web developer may prefer their own web app
