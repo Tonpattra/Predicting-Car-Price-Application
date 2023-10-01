@@ -14,39 +14,47 @@ y_train_cut = pd.cut(y_train, bins=bin_edges, labels=[0, 1, 2, 3], ordered=False
 y_test_cut = pd.cut(y_test, bins=bin_edges, labels=[0, 1, 2, 3], ordered=False)
 
 ```
+## Task 2 :Define function accuracy, recall and precision
+Show the results function in Task 2:
 ```
-function xaviar (self, size) {
-        m = size
-        lower , upper = -(1.0 / np.sqrt(m)), (1.0 / np.sqrt(m))
-        numbers = np.random.rand(m)
-        scaled = lower + numbers * (upper - lower)
-        return scaled;
-}
-```
-```
-def _train(self, X, y):
-        yhat = self.predict(X)
-        m    = X.shape[0]        
-        grad = (1/m) * X.T @(yhat - y) + self.regularization.derivation(self.theta)
-        # self.theta = self.theta - self.lr * grad
-        self.theta = self.update_weight(grad, self.moment)
-        if self.method == 'sto' :
-            y = np.array([y])
-        return self.mse(y, yhat), self.r2(y, yhat);
-}
+def accuracy(yhat, ytrue) :
+    correct = 0
+    for idx, v in enumerate(ytrue) :
+        if v == yhat[idx] :
+            correct += 1
+    return  correct/len(yhat)   
 ```
 ```
-class LassoPenalty:
-    
-    def __init__(self, l):
-        self.l = l # lambda value
-        
-    def __call__(self, theta): #__call__ allows us to call class as method
-        return self.l * np.sum(np.abs(theta))
-        
-    def derivation(self, theta):
-        return self.l * np.sign(theta)
-    
+def precision(yhat, ytrue, class_det) :
+    tp = 0
+    fp = 0
+    for idx , a in enumerate(ytrue) :
+        if yhat[idx] == class_det and a == class_det :
+            tp += 1
+        if yhat[idx] == class_det and a != class_det :
+            fp += 1
+    if tp + fp == 0:
+        precision = 0
+    else:
+        precision = tp / (tp + fp)        
+    return precision
+```
+```
+def recall(yhat, ytrue, class_det) :
+    tp = 0
+    fn = 0
+    for idx , a in enumerate(ytrue) :
+        if yhat[idx] == class_det and a == class_det :
+            tp += 1
+        if yhat[idx] != class_det and a == class_det :
+            fn += 1
+        if tp+fn == 0:
+            recall = 0
+        else :
+            recall = tp/(tp+fn)
+
+    return recall
+```  
 class NormalP:
     
     def __init__(self, l):
