@@ -59,7 +59,8 @@ def f1(prec, rec):
     if prec == 0 or rec == 0:
         return 0  # Handle the case where either precision or recall is zero
     return (2 * prec * rec) / (prec + rec)   
- ```   
+ ```
+
 ## Task 3 :Deployment 
 - Develop a web-based application that contains the model. Here you will be tasked to self-study how to deploy the model into production. Here are some guidelines:
 - Here you have multiple options. Those who are veteran web developer may prefer their own web app
