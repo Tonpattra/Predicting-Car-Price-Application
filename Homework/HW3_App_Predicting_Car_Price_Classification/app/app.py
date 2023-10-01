@@ -7,14 +7,14 @@ from sklearn.preprocessing import StandardScaler
 # feature scaling helps improve reach convergence faster
 scaler = StandardScaler()
 # X_train = scaler.fit_transform(X_train)
-
+print(os.listdir())
 with open ("./standard.pkl", 'rb') as file:
     standard = pickle.load(file)
 app = Flask(__name__)
 filename = './price_predict.model'
 loaded_model = pickle.load(open(filename, 'rb'))
 
-# print(os.listdir())
+
 
 file_path = "./bestmodel.pkl"
 with open(file_path, "rb") as file_1:
