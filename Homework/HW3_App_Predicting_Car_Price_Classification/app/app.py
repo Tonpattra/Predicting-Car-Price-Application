@@ -3,99 +3,71 @@ import pickle
 import os
 import numpy as np
 from sklearn.preprocessing import StandardScaler
-# import cloudpickle
-# feature scaling helps improve reach convergence faster
-scaler = StandardScaler()
-# X_train = scaler.fit_transform(X_train)
-print(os.listdir())
-with open ("Homework/HW3_App_Predicting_Car_Price_Classification/app/standard.pkl", 'rb') as file:
-    standard = pickle.load(file)
+import cloudpickle
+import mlflow
 app = Flask(__name__)
+
+# Load the fitted StandardScaler
+with open("Homework/HW3_App_Predicting_Car_Price_Classification/app/standard.pkl", 'rb') as file:
+    standard = pickle.load(file)
+
+# Load the regression model
 filename = 'Homework/HW3_App_Predicting_Car_Price_Classification/app/price_predict.model'
 loaded_model = pickle.load(open(filename, 'rb'))
 
-
-
+# Load the new_model
 file_path = "Homework/HW3_App_Predicting_Car_Price_Classification/app/bestmodel.pkl"
 with open(file_path, "rb") as file_1:
     new_model = pickle.load(file_1)
 
+# Load the classification model
 file_path_classification = "Homework/HW3_App_Predicting_Car_Price_Classification/best_classification.pkl"
 with open(file_path_classification, "rb") as file_2:
     classification_model = pickle.load(file_2)
 
-# import cloudpickle
-
-# Attempting to load a pickled object from a file
-# try:
-#     with open("bestmodel.pkl", 'rb') as file_1:
-#         new_model = pickle.load(file_1)
-# except Exception as e:
-#     print(f"Error loading pickled object: {e}")
-
-app = Flask(__name__)
-
-
 @app.route('/')
 def index():
     return render_template('index.html')
-#textbox1 = power
-#textbox2 = engine
-#textbox3 = years
 
-def conv(inp, model, typr) :
-    # variable = [ i for i, j in locals().items() if j == model][0]
-    # print(variable)
-    # if variable == "new_model" :
-    if typr == "regression" :
-        try : 
-
-            ans = standard.transform([inp])
-            intercept = np.ones((ans.shape[0], 1))
-            inter   = np.concatenate((intercept, ans), axis=1)
-            print(inter)
+def conv(inp, model, typr):
+    try:
+        ans = standard.transform([inp])
+        intercept = np.ones((ans.shape[0], 1))
+        inter = np.concatenate((intercept, ans), axis=1)
+        if typr == 'regression':
             pric = np.exp(model.predict(inter))
             return pric.item()
-    # else :
-        except :
+        else:
+            a = model.predict(inter)
+            return np.argmax(a, axis=1).item()
+    except Exception as e:
+        # Handle any errors here, such as input data formatting or model prediction issues
+        print(f"Error in conv function: {e}")
+        return None
 
-            ans = standard.transform([inp])
-            pric = np.exp(model.predict(ans))
-            return pric.item()
-    else :
-        ans = standard.transform([inp])
-        intercept = np.ones((ans.shape[0], 1)) 
-        inter   = np.concatenate((intercept, ans), axis=1)
-        print(inter.shape)
-        a = model.predict(inter)
-        return np.argmax(a, axis=1).item()
-        
 @app.route('/receive_data', methods=['POST'])
 def receive_data():
     textbox1_data = request.form.get('textbox1')
-    if not(textbox1_data) :
-        textbox1_data = 82
     textbox2_data = request.form.get('textbox2')
-    if not(textbox2_data) :
-        textbox2_data = 1248
     textbox3_data = request.form.get('textbox3')
-    if not(textbox3_data) :
-        textbox3_data = 2017
 
-    # print(type(new_model))
-    result = [float(textbox1_data), float(textbox2_data), float(textbox3_data)]
-    # X_train = scaler.fit_transform(result)
-    load_data = conv(result, loaded_model, 'regression')
-    new_pred = conv(result, new_model, 'regression')
-    classification_pred = conv(result, classification_model, 'classification')
+    # Convert input data to float, handle missing values if needed
+    try:
+        textbox1_data = float(textbox1_data) if textbox1_data else 82.0
+        textbox2_data = float(textbox2_data) if textbox2_data else 1248.0
+        textbox3_data = float(textbox3_data) if textbox3_data else 2017.0
+    except ValueError as e:
+        print(f"Error converting input data: {e}")
+        # Handle the error as needed
 
-    # print(load_data)
-    # print(new_pred)
+    # Perform predictions
+    load_data = conv([textbox1_data, textbox2_data, textbox3_data], loaded_model, 'regression')
+    new_pred = conv([textbox1_data, textbox2_data, textbox3_data], new_model, 'regression')
+    classification_pred = conv([textbox1_data, textbox2_data, textbox3_data], classification_model, 'classification')
 
     # Render the response.html template and pass the data to it
     return render_template('/response.html', 
-                           textbox1_data= load_data, textbox2_data= new_pred, textbox3_data= classification_pred
-                           )
+                           textbox1_data=load_data, textbox2_data=new_pred, textbox3_data=classification_pred)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
-
