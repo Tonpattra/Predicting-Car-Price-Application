@@ -8,15 +8,15 @@ from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 # X_train = scaler.fit_transform(X_train)
 
-with open ("standard.pkl", 'rb') as file:
+with open ("./standard.pkl", 'rb') as file:
     standard = pickle.load(file)
 app = Flask(__name__)
-filename = 'price_predict.model'
+filename = './price_predict.model'
 loaded_model = pickle.load(open(filename, 'rb'))
 
 # print(os.listdir())
 
-file_path = "bestmodel.pkl"
+file_path = "./bestmodel.pkl"
 with open(file_path, "rb") as file_1:
     new_model = pickle.load(file_1)
 
