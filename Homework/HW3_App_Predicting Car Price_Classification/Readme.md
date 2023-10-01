@@ -90,6 +90,8 @@ After that you can click send, Get the Data Received
 And when you need to come back homepage, you cilck Button Back to homework
 But you forgot to fill in one of the fields. there is no need to worry Because we will take the middle value of the data to Predict instead.
 
+The results in Part Classification 0: cheap 1: normal 2: expensive 3: more expensive
+
 ## Conclusion :
 - I tried to write an application for the first time. I really like it and I feel very understanding in class. Thank you for the homework this time. That makes it a good experience!!
 - How the new model is better than the old one Ans: I don't know why becuses my model the old is better than the new one TT
