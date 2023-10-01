@@ -85,7 +85,7 @@ You can add data 3 type (power, engine and years)
 ![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/31abbfa9-d2f2-423b-b62b-32b4267619d7)
 
 After that you can click send, Get the Data Received
-![image](https://github.com/Tonpattra/Machine-Learning/assets/89975216/31abbfa9-d2f2-423b-b62b-32b4267619d7)
+![image](https://github.com/Tonpattra/Machine-Learning/edit/main/Homework/HW3_App_Predicting%20Car%20Price_Classification/result.png)
 
 And when you need to come back homepage, you cilck Button Back to homework
 But you forgot to fill in one of the fields. there is no need to worry Because we will take the middle value of the data to Predict instead.
